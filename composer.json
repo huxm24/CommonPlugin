@@ -1,0 +1,12 @@
+{
+    "name": "connext/plugin",
+    "description": "联蔚公共插件",
+    "type": "library",
+    "autoload": {
+    	"psr-4": {
+         	"ConnextPlugin\\": "src/"
+         }
+    },
+    "require": {
+    }
+}
