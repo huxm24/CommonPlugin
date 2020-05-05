@@ -7,6 +7,7 @@ use GuzzleHttp\RequestOptions;
 use GuzzleHttp\Psr7\Response;
 
 trait GuzzleHttp {
+
     private static $options = [
         RequestOptions::VERIFY => false,
         RequestOptions::TIMEOUT => 2
@@ -41,7 +42,6 @@ trait GuzzleHttp {
                     break;
             }
         }
-
         return $sendParams;
     }
 
