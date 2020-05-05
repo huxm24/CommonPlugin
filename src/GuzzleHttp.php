@@ -26,7 +26,6 @@ trait GuzzleHttp {
     {
         $ptype      = strtoupper($ptype);
         $dtype      = strtoupper($dtype);
-
         $sendParams = [];
         if ($ptype == 'GET') {
             $sendParams[RequestOptions::QUERY] = $params;
