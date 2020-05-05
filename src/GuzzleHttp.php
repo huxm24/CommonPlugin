@@ -87,7 +87,7 @@ trait GuzzleHttp {
         $responseData = [];
         $pool = new Pool($client, $requests($params['sendParams']), [
             'concurrency' => count($params['sendParams']),
-            'fulfilled' => function (Response $response, $index) use (&$requestEntity, &$responseData, &$postParams) {
+            'fulfilled' => function (Response $response, $index) use (&$responseData) {
                 $responseData[$index]['code'] = $response->getStatusCode();
                 $responseData[$index]['content'] = $response->getBody()->getContents();
             },
